@@ -1,0 +1,51 @@
+.card-container {
+    width: 300px;
+    height: 600px;
+    border: 1px solid #000;
+    position: relative;
+
+    .divergence-image {
+        span {
+            position: absolute;
+            top: 0;
+            width: -webkit-fill-available;
+            padding: 0.2rem;
+            background: transparent;
+            &.current {
+                background: #00FF00;
+            }
+            &.conflict {
+                background: #FF0000;
+                color: #FFFFFF;
+            }
+        }
+        img {
+            max-height: 350px;
+        }
+    }
+
+    .buttons-area {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        top: 350px;
+        background: #FFFFFF;
+    }
+
+    .info-area {
+        margin: 40px 5px 0 20px;
+        list-style: none;
+        li {
+            margin-top: 0.2rem; 
+        }
+    }
+
+    .save-button {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+

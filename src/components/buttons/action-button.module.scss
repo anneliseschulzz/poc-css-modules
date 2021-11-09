@@ -1,0 +1,21 @@
+.button {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    margin: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    &__positive {
+        background: #36A854;
+    }
+    &__discart {
+        background: #60605F;
+    }
+    &__suspect {
+        background: #EB8309;
+    }
+    &__restrict {
+        background: #BD362F;
+    }
+}

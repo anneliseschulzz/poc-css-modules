@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react"
+import styles from './App.module.scss';
+import '@acesso-io/genoma-components-react/dist/styles.css';
+import '@acesso-io/genoma-components-react/dist/reset.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import DivergenceCard from './components/divergence-card/divergence-card.component'
+
+class App extends Component {
+  render() {
+    const current = {
+      class: 'current',
+      label: 'Pessoa análise' 
+    }
+    const restricted = {
+      class: 'conflict', 
+      label: 'Restrito'
+    }
+
+    return (
+      <div className={styles['main-layout']}>
+        <DivergenceCard type={current} ></DivergenceCard>
+        <DivergenceCard type={restricted} ></DivergenceCard>
+      </div>
+    )
+  }
 }
 
 export default App;
